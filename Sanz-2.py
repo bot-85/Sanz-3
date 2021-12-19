@@ -228,7 +228,7 @@ def menu():
 	except:
 		pass
 	clear()
-	banner()
+	logo()
 	try:
 		token = open("token.txt","r").read()
 		cintaku = requests.get("https://graph.facebook.com/me?access_token="+token)
