@@ -349,7 +349,7 @@ def result():
 		else:
 			print("\n"+balmond+l+" \33[1;93mHasil CP")
 			for jisoo in lisaa:
-				print(balmond+l+" "\33[1;93m+jisoo)
+				print(balmond+l+" "+jisoo)
 			marjan = input(balmond+l+"\33[1;93m File : "+h+"")
 			try:
 				binatang = open("Hasil_Cp/%s"%(marjan))
