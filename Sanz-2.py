@@ -198,7 +198,6 @@ def login():
                 print '%s \x1b[1;92m╠══><%s \x1b[1;93msetelah di alihkan ke google chrome. klik %stitik tiga'%(B,N,H)
                 print '%s \x1b[1;92m╠══><%s \x1b[1;93mlalu klik %sCari di Halaman%s \x1b[1;93mTinggal ketik %sEAAA%s \x1b[1;93mLalu salin'%(B,N,H,N,H,N)
                 print(" \x1b[1;92m╠══><%s \x1b[1;93mSihlakan kunjungi Facebook me \x1b[1;92mBintang Tzy \x1b[1;93mTerimakasih."%(N))
-                print(" \x1b[1;92m╠══[\x1b[1;93m+\x1b[1;92m] \x1b[1;93m-------------------------------------------------------")
 	token = input("\n"+balmond+l+" Masukkan Token Facebook : ")
 	try:
 		hujan = requests.get("https://graph.facebook.com/me?access_token="+token)
