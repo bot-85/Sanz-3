@@ -145,47 +145,56 @@ def jalan(ms):
 def clear():
 	os.system("clear")
 
-# LOGO
+### BAGIAN LOGO ###
+def logo():
+	os.system("clear")
+	print("""%s
+ \x1b[1;92m _________             \x1b[1;93m_____    _______   \x1b[1;92m__________
+ \x1b[1;92m/   _____/            \x1b[1;93m/  _  \   \      \  \x1b[1;92m\____    /
+ \x1b[1;92m\_____  \   \x1b[1;93m_______  /  /_\  \  /   |   \   \x1b[1;92m/     /
+ \x1b[1;92m/ V2.1   \ \x1b[1;93m/______/ /    |    \/    |    \ \x1b[1;92m/     /_ 
+ \x1b[1;92m/______  /          \x1b[1;93m\____|__  /\____|__  /\x1b[1;92m/_______ \  
+ \x1b[1;92m       \/     \x1b[1;93m              \/         \/         \x1b[1;92m\/    """%(N))
+ 
 
-def banner():
-	print(u+"""
-██╗   ██╗████████╗ ██████╗ ██████╗ ██╗ █████╗ 
-██║   ██║╚══██╔══╝██╔═══██╗██╔══██╗██║██╔══██╗
-██║   ██║   ██║   ██║   ██║██████╔╝██║███████║
-██║   ██║   ██║   ██║   ██║██╔═══╝ ██║██╔══██║
-╚██████╔╝   ██║   ╚██████╔╝██║     ██║██║  ██║
- ╚═════╝    ╚═╝    ╚═════╝ ╚═╝     ╚═╝╚═╝  ╚═╝v2.5
-AUTHOR : HARIS GANZ
-RECODE : Sanz Tzy\n"""+h+line)
-
-MAX_IPV4 = ipaddress.IPv4Address._ALL_ONES # IP
-MAX_IPV6 = ipaddress.IPv6Address._ALL_ONES # IP
-
-def random_ipv4():
-	return ipaddress.IPv4Address._string_from_ip_int(random.randint(0, MAX_IPV4))
-def random_ipv6():
-	return ipaddress.IPv6Address._string_from_ip_int(random.randint(0, MAX_IPV6))
-
-
-# LOGIN
-
-def login():
-	clear()
-	banner()
-	token = input("\n"+balmond+l+" Masukkan Token Facebook : ")
+### BAGIAN LOGIN ###
+def tokenz():
+	os.system('clear')
 	try:
-		hujan = requests.get("https://graph.facebook.com/me?access_token="+token)
-		batu = json.loads(hujan.text)
-		air = batu["name"]
-		api = open("token.txt","w");api.write(token);api.close()
-		jalan(balmond+l+" Login Sukses")
-		time.sleep(0.5)
-		bot()
-	except KeyError:
-		jalan(balmond+m+" Login Gagal")
-		time.sleep(0.5)
-		login()
-
+		token = open('token.txt', 'r')
+		menu()
+	except (KeyError, IOError):
+		os.system('clear')
+                logo()
+                print(" \x1b[1;92m╠══[\x1b[1;93m+\x1b[1;92m] \x1b[1;93m-------------------------------------------------------")
+                print(" %s\x1b[1;92m╠══[\x1b[1;93m+\x1b[1;92m] \x1b[1;93mAuthor     \x1b[1;93m: \x1b[1;93mSanz Tzy"%(N))     
+		print(" %s\x1b[1;92m╠══[\x1b[1;93m+\x1b[1;92m] \x1b[1;93mWhatshap   \x1b[1;93m: \x1b[1;93m081210xxxx"%(N))   
+		print(" \x1b[1;92m╠══[\x1b[1;93m+\x1b[1;92m] \x1b[1;93mFacebook   \x1b[1;93m: \x1b[1;93mBintang Tzy")      
+		print(" \x1b[1;92m╠══[\x1b[1;93m+\x1b[1;92m] \x1b[1;93m══════════════════════════════════════")     
+		print(" \x1b[1;92m╠══[\x1b[1;93m+\x1b[1;92m] \x1b[1;93mBergabung  \x1b[1;93m: %s"%(tgl))                     
+		print(" \x1b[1;92m╠══[\x1b[1;93m+\x1b[1;92m] \x1b[1;93mStatus     \x1b[1;93m: %s\x1b[1;91mA M P A S%s"%(H,N)) 
+                print(" %s\x1b[1;92m╠══[\x1b[1;93m+\x1b[1;92m] \x1b[1;93mYautube     \x1b[1;93m: \x1b[1;93mBintang XD"%(N))
+                print(" \x1b[1;92m╠══[\x1b[1;93m+\x1b[1;92m] \x1b[1;93m══════════════════════════════════════")               
+                print(" \x1b[1;92m╠══[\x1b[1;93m+\x1b[1;92m] \x1b[1;93m-------------------------------------------------------")
+                print '%s \x1b[1;92m╠══><%s \x1b[1;93musahakan akun tumbal login di google chrome terlebih dahulu'%(B,N)
+                print '%s \x1b[1;92m╠══><%s \x1b[1;93mjangan lupa! url ubah ke %shttps://m.facebook.com'%(B,N,H)
+                print '%s \x1b[1;92m╠══><%s \x1b[1;93msetelah di alihkan ke google chrome. klik %stitik tiga'%(B,N,H)
+                print '%s \x1b[1;92m╠══><%s \x1b[1;93mlalu klik %sCari di Halaman%s \x1b[1;93mTinggal ketik %sEAAA%s \x1b[1;93mLalu salin'%(B,N,H,N,H,N)
+                print(" \x1b[1;92m╠══><%s \x1b[1;93mSihlakan kunjungi Facebook me \x1b[1;92mBintang Tzy \x1b[1;93mTerimakasih."%(N))
+                print(" \x1b[1;92m╠══[\x1b[1;93m+\x1b[1;92m] \x1b[1;93m-------------------------------------------------------")
+		token = raw_input('\n \x1b[1;92m╠══[\x1b[1;93m?\x1b[1;92m] \x1b[1;93mtoken Fb disini \x1b[1;93m: \x1b[1;92m')
+		try:
+			otw = requests.get('https://graph.facebook.com/me?access_token='+token)
+			a = json.loads(otw.text)
+			zedd = open('token.txt', 'w')
+			zedd.write(token)
+			zedd.close()
+			bot()
+			menu()
+		except KeyError:
+			print(" %s[!] token kadaluwarsa!"%(M))
+			sys.exit() 
+ 
 # BOT
 
 def bot():
