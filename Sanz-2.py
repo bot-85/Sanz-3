@@ -330,7 +330,7 @@ def tema():
 
 def result():
 	print(s+"\n{"+m+"1"+s+"}"+l+" \33[1;93mCek Result CP "+k+"{akun sesi}")
-	print(s+"{"+m+"2"+s+"}"+l+" \33[1;92mCek Result OK "+k+"{akun terbuka}")
+	print(s+"{"+m+"2"+s+"}"+l+" \33[1;92mCek Result OK "+k+"\33[1;92m{akun terbuka}")
 	print(s+"{"+m+"0"+s+"}"+l+" \33[1;91mKembali")
 	pilih = input("\n"+balmond+l+" \33[1;93mPilih : \33[1;92m")
 	if pilih=="1" or pilih=="01":
@@ -347,7 +347,7 @@ def result():
 			time.sleep(0.5)
 			menu()
 		else:
-			print("\n"+balmond+l+" Hasil CP")
+			print("\n"+balmond+l+" \33[1;93mHasil CP")
 			for jisoo in lisaa:
 				print(balmond+l+" "+jisoo)
 			marjan = input(balmond+l+" File : "+h+"")
@@ -376,7 +376,7 @@ def result():
 			time.sleep(0.5)
 			menu()
 		else:
-			print("\n"+balmond+l+" Hasil Ok")
+			print("\n"+balmond+l+" \33[1;92mHasil Ok")
 			for jisoo in lisaa:
 				print(balmond+l+" "+jisoo)
 			marjan = input(balmond+l+" File : "+h+"")
