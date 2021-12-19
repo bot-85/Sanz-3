@@ -181,9 +181,9 @@ def random_ipv6():
 # LOGIN
 
 def login():
-	        clear()
-        	banner()
-	token = input("\n"+balmond+l+" Token FB Dsini : ")
+	clear()
+	banner()
+	token = input("\n"+balmond+l+" Masukkan Token Facebook : ")
 	try:
 		hujan = requests.get("https://graph.facebook.com/me?access_token="+token)
 		batu = json.loads(hujan.text)
